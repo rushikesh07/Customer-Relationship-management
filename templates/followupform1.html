@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='followupform.css') }}">
+    <link rel= "stylesheet" type= "text/scss" href= "{{ url_for('static',filename='followupform.scss') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='followupform.js') }}"></script>
+
+</head>
+<form method="POST" action="">
+<body>
+
+
+  <form>
+    <div class="form">
+  <h2>Create Follow Up </h2>
+  <label for="name">Name:</label>
+  <input type="text" maxlength="60" name="name" required="required" />
+
+  <label for="companyname">Company Name:</label>
+  <input type="text" maxlength="60" name="companyname" required="required" />
+
+  <label for="contact">Contact Details</label>
+  <input type="text" maxlength="60" name="contact" required="required" />
+
+  <label for="date">Date:</label>
+  <input type="date" minlength="6" name="Date" required="required"/>
+
+  <label for="Time">Time:</label>
+  <input type="time" maxlength="60" name="Time" required="required" />
+
+  <label for="Type">Follow Up Type:</label>
+  <input type="text" maxlength="60" name="Type" required="required" />
+
+  <label for="product">Product Intrested:</label>
+  <input type="text" maxlength="60" name="product" required="required" />
+
+  <label for="description">Description Information:</label>
+  <input type="text" maxlength="60" name="description" />
+
+  <button type="submit">Save</button>
+
+</div>
+</form>
+
+
+
+
+
+
+
+</body>
+</form>
+</html>

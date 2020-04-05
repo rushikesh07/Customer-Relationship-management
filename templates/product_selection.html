@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>table</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='product_selection.css') }}">
+</head>
+
+<body>
+
+  <button class="tablink1">CRM</button>
+  <a href="dash"><button class="tablink">Dashboard</button></a>
+  <a href="leadtable"><button class="tablink">Leads</button></a>
+  <a href="followuptable"><button class="tablink">FollowUps</button></a>
+  <a href="ordertable"><button class="tablink">Orders</button></a>
+  <a href="producttable"><button class="tablink2">Products</button></a>
+  <a href="contacttable"><button class="tablink">Contacts</button></a>
+  <a href="report"><button class="tablink">Report</button></a>
+
+<button class="button6"></button>
+
+
+  <section>
+  <!--for demo wrap-->
+  <h1>Select Products</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Category</th>
+          <th>Vendor</th>
+          <th>Price</th>
+          <th>Tax %</th>
+          <th>Available Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        {% for product in product %}
+        <tr>
+          <td>{{product.pname}}</td>
+          <td>{{product.pcode}}</td>
+          <td>{{product.pcategory}}</td>
+          <td>{{product.vendorname}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.tax}}</td>
+          <td>{{product.quantity}}</td>
+          <td>
+            <a href="select_order/{{product.pcode}}"><button class="button7">Select</button></a>
+          </td>
+
+        </tr>
+        {% endfor %}
+
+
+      </tbody>
+    </table>
+  </div>
+</section>
+<a href="product_quantity"><button class="button8">Select Quantity</button></a>
+
+
+
+
+</body>
+
+</html>

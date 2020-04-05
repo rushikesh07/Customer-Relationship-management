@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<style>
+h1
+{
+margin-left: 625px;
+margin-top: 150px;
+font-size: 50px;
+}
+body {
+  align-items: center;
+  background: #fff;
+  justify-content: center;
+}
+
+.btn-group1 button {
+    background-color: #777; /* Green background */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    margin-left: 350px;
+    margin-top: 50px
+}
+
+.btn-group2 button {
+    background-color: #777; /* Green background */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+    margin-left: 350px;
+    margin-top: 0px
+}
+
+/* Add a background color on hover */
+.btn-group1 button:hover {
+    background-color: black;
+}
+.btn-group2 button:hover {
+    background-color: black;
+}
+
+.form {
+  box-shadow: 0 0 9px #ddd, 0 0 1px #aaa, 0 28px 25px -20px #888;
+  color: #555;
+  padding: 1em;
+  width: 625px;
+  margin-left: 360px;
+}
+.form h2 {
+  padding: 1em;
+  text-align: center;
+}
+.form input, .form label, .form button {
+  display: block;
+  margin: .5em auto;
+  width: 80%;
+}
+.form label {
+  margin-bottom: 1em;
+}
+.form input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #bbb;
+  color: #555;
+  font-family: ubuntu;
+  font-weight: bold;
+  padding-bottom: 0;
+  transition: all .5s;
+}
+.form input:focus {
+  box-shadow: inset 0 -2px 0 steelblue;
+  padding-bottom: 1em;
+  outline: 0;
+}
+.form button {
+  background: #ddd;
+  border: 0;
+  color: #555;
+  cursor: pointer;
+  margin: 2em auto;
+  height: 40px;
+  width: 60px;
+}
+
+</style>
+
+{% block body %}
+<form method="POST" action="">
+<body>
+
+<h1>CRM</h1>
+
+<div class="btn-group1">
+  <button>LOGIN</button>
+  </div>
+
+  <form>
+<div class="form">
+    <label for="email">Email:</label>
+    <input type="email" maxlength="60" name="email" required="required"  />
+
+    <label for="password">Password:</label>
+    <input type="password" minlength="6" name="password" required="required"  />
+
+
+    <button type="submit">Submit</button>
+</div>
+
+  </form>
+
+</body>
+</form>
+{% endblock %}
+</html>

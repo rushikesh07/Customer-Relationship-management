@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>table</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='invoice.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='invoice.js') }}"></script>
+</head>
+
+<body>
+
+    <button class="tablink1">CRM</button>
+    <a href="dash"><button class="tablink">Dashboard</button></a>
+    <a href="leadtable"><button class="tablink">Leads</button></a>
+    <a href="followuptable"><button class="tablink">FollowUps</button></a>
+    <a href="ordertable"><button class="tablink">Orders</button></a>
+    <a href="producttable"><button class="tablink2">Products</button></a>
+    <a href="contacttable"><button class="tablink">Contacts</button></a>
+  <a href="report"><button class="tablink">Report</button></a>
+
+<a><button class="button8"></button></a>
+
+<h1>Invoice</h1>
+<h3>Vishesh Technology Pvt Ltd</h3>
+<p>
+Mumbai-400110  <br>
+9968166535 <br>
+visheshshukla345@gmail.com <br>
+</p>
+
+
+
+<p class="right">
+Invoice No.:56565     <br>
+Date:05/06/2018     <br>
+</p>
+<div class="tbl-content2">
+  <table cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+      <tr>
+        <td colspan="2"><b>To:</b></td>
+      </tr>
+      <tr>
+        <td><b>Name:</b></td>
+        <td>Vishesh Shukla</td>
+      </tr>
+      <tr>
+        <td><b>Email:</b></td>
+        <td>visheshshukla345@gmail.com</td>
+      </tr>
+      <tr>
+        <td><b>Company Name:</b></td>
+        <td>VV</td>
+      </tr>
+      <tr>
+        <td><b>Phone:</b></td>
+        <td>9967166381</td>
+      </tr>
+      <tr>
+        <td><b>Address:</b></td>
+        <td>Mumbai</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+  <section>
+  <!--for demo wrap-->
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Code</th>
+          <th>Price</th>
+          <th>Tax %</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>moto x</td>
+          <td>0011</td>
+          <td>100000</td>
+          <td>18%</td>
+          <td>2</td>
+          <td>236000</td>
+        </tr>
+
+        <tr>
+          <td>moto g</td>
+          <td>0022</td>
+          <td>100000</td>
+          <td>18%</td>
+          <td>2</td>
+          <td>236000</td>
+        </tr>
+        <tr>
+          <td><b>_______________________________________________________________________________________________________________________________________________________________________________________</b></td>
+        </tr>
+
+        <tr>
+          <td><b>Final Amount:</b></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><b>472000</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+ <p>
+   Make all checks payable to <b>Vishesh Technology Pvt Ltd</b><br>
+   Total due in 15 days. Overdue accounts subject to service charge 1% per month.
+ </p>
+
+ <h4><b>Thank You for your Business !!!</b></h4>
+
+
+<button class="button4">Print</button>
+
+</body>
+
+</html>

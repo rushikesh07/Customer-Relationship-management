@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>table</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='generatereport.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='generatereport.js') }}"></script>
+
+
+</head>
+
+<body>
+  <button class="tablink1">CRM</button>
+  <a href="http://localhost:5000/dash"><button class="tablink">Dashboard</button></a>
+  <a href="http://localhost:5000/leadtable"><button class="tablink">Leads</button></a>
+  <a href="http://localhost:5000/followuptable"><button class="tablink">FollowUps</button></a>
+  <a href="http://localhost:5000/ordertable"><button class="tablink">Orders</button></a>
+  <a href="http://localhost:5000/producttable"><button class="tablink">Products</button></a>
+  <a href="http://localhost:5000/contacttable"><button class="tablink">Contacts</button></a>
+  <a href="http://localhost:5000/report"><button class="tablink2">Report</button></a>
+
+<button class="button8"></button>
+
+
+  <section>
+  <!--for demo wrap-->
+
+
+  <h1>report of {{contact.name}}</h1>
+
+
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+
+        <tr>
+          <td><b>Name:</b></td>
+          <td>{{contact.name}}</td>
+        </tr>
+        <tr>
+          <td><b>Email:</b></td>
+          <td>{{contact.email}}</td>
+        </tr>
+        <tr>
+          <td><b>Company:</b></td>
+          <td>{{contact.company_name}}</td>
+        </tr>
+        <tr>
+          <td><b>Phone:</b></td>
+          <td>{{contact.phone}}</td>
+        </tr>
+        <tr>
+          <td><b>Lead Source:</b></td>
+          <td>{{contact.source}}</td>
+        </tr>
+        <tr>
+          <td><b>Address:</b></td>
+          <td>{{contact.address}}</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th><b>Follow Up Log</b></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content2">
+    <table cellpadding="0" cellspacing="0" border="0">
+
+      <tbody>
+        <script type="text/javascript">
+    var number = 1;
+  </script>
+          {% for followuplog in followuplog %}
+        <tr>
+          <td><b><script type="text/javascript">
+        document.write(number)
+      </script>]</b></td>
+
+        </tr>
+        <tr>
+          <td><b>Date:</b></td>
+          <td>{{followuplog.date}}</td>
+        </tr>
+        <tr>
+          <td><b>Time:</b></td>
+          <td>{{followuplog.time}}</td>
+        </tr>
+        <tr>
+          <td><b>Type:</b></td>
+          <td>{{followuplog.f_type}}</td>
+        </tr>
+        <tr>
+          <td><b>Product:</b></td>
+          <td>{{followuplog.product}}</td>
+        </tr>
+        <tr>
+          <td><b>Description:</b></td>
+          <td>{{followuplog.description}}</td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><b>---------------------------------------------------------------------------------------</b></td>
+        </tr>
+
+        <script type="text/javascript">
+    var number = number + 1;
+  </script>
+      {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th><b>Final Invoice</b></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content2">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td><b>1]</b></td>
+
+        </tr>
+        <tr>
+          <td><b>Product ID:</b></td>
+          <td>moto X</td>
+        </tr>
+        <tr>
+          <td><b>Product Name:</b></td>
+          <td>moto X</td>
+        </tr>
+        <tr>
+          <td><b>Product Category:</b></td>
+          <td>Mobile</td>
+        </tr>
+        <tr>
+          <td><b>Product Specifications:</b></td>
+          <td>4GB RAM | 64GB ROM</td>
+        </tr>
+        <tr>
+          <td><b>Product Discription:</b></td>
+          <td><ul>
+          <li>12MP + 12MP dual primary camera and 7MP front facing camera</li>
+          <li>13.97 centimeters (5.5-inch) capacitive touchscreen with 1920 x 1080 pixels resolution</li>
+          <li>iOS v11 operating system with 1.2GHz Apple A11 Bionic hexa core processor, 3GB RAM, 64GB internal memory, single SIM</li>
+          <li>2691mAH lithium-ion battery</li>
+
+        </ul></td>
+        </tr>
+        <tr>
+          <td><b>Price:</b></td>
+          <td>100000</td>
+        </tr>
+        <tr>
+          <td><b>Tax %:</b></td>
+          <td>18%</td>
+        </tr>
+        <tr>
+          <td><b>Quantity:</b></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td colspan="2"><b>-------------------------------------------------------------------------------------</b></td>
+        </tr>
+
+        <tr>
+          <td><b>2]</b></td>
+
+        </tr>
+        <tr>
+          <td><b>Product ID:</b></td>
+          <td>6556</td>
+        </tr>
+        <tr>
+          <td><b>Product Name:</b></td>
+          <td>moto g</td>
+        </tr>
+        <tr>
+          <td><b>Product Category:</b></td>
+          <td>Mobile</td>
+        </tr>
+        <tr>
+          <td><b>Product Specifications:</b></td>
+          <td>4GB RAM | 64GB ROM</td>
+        </tr>
+        <tr>
+          <td><b>Product Discription:</b></td>
+          <td><ul>
+          <li>12MP + 12MP dual primary camera and 7MP front facing camera</li>
+          <li>13.97 centimeters (5.5-inch) capacitive touchscreen with 1920 x 1080 pixels resolution</li>
+          <li>iOS v11 operating system with 1.2GHz Apple A11 Bionic hexa core processor, 3GB RAM, 64GB internal memory, single SIM</li>
+          <li>2691mAH lithium-ion battery</li>
+
+        </ul></td>
+        </tr>
+        <tr>
+          <td><b>Price:</b></td>
+          <td>100000</td>
+        </tr>
+        <tr>
+          <td><b>Tax %:</b></td>
+          <td>18%</td>
+        </tr>
+        <tr>
+          <td><b>Quantity:</b></td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td colspan="2"><b>_________________________________________________________________________</b></td>
+        </tr>
+
+        <tr>
+          <td><b>Total Amount:</b></td>
+          <td>240000</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+</section>
+
+    <script  src="js/index.js"></script>
+
+<button class="button4">Print</button>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='dash.css') }}">
+    <link rel= "stylesheet" type= "text/scss" href= "{{ url_for('static',filename='dash.scss') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='dash.js') }}"></script>
+<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+</head>
+<body>
+
+<button class="tablink1">CRM</button>
+<a href="dash"><button class="tablink2">Dashboard</button></a>
+<a href="leadtable"><button class="tablink">Leads</button></a>
+<a href="followuptable"><button class="tablink">FollowUps</button></a>
+<a href="ordertable"><button class="tablink">Orders</button></a>
+<a href="producttable"><button class="tablink">Products</button></a>
+<a href="contacttable"><button class="tablink">Contacts</button></a>
+<a href="report"><button class="tablink">Report</button></a>
+
+
+
+<div class='title'>
+<h1>
+  ANALYTICS
+</h1>
+</div>
+<div class='ui'>
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+      Conversion Rate
+    </h2>
+    <div class='stat'>
+      <span><!--{{conrate}}-->32%</span>
+    </div>
+    <div class='progress'>
+      <div class='progress_bar'></div>
+    </div>
+  </div>
+</div>
+
+
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+      Number of Leads
+    </h2>
+
+    <div class='stat'>
+      <span>11{{leadcount1}}</span>
+    </div>
+
+    <div class='progress_graph'>
+      <i class="fa fa-magnet"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+    Running Orders
+    </h2>
+    <div class='stat'>
+      <span>2{{ordercount}}</span>
+    </div>
+    <div class='progress_graph'>
+      <i class="fa fa-book"></i>
+    </div>
+  </div>
+</div>
+</div>
+<div class='ui'>
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+      Sales this Month
+    </h2>
+    <div class='stat'>
+      <span>₹ 5,53,600</span>
+    </div>
+
+
+  </div>
+</div>
+
+
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+      Annual Sales
+    </h2>
+    <div class='stat'>
+      <span>₹ 15,85,600</span>
+    </div>
+
+  </div>
+</div>
+<div class='ui_box'>
+  <div class='ui_box__inner'>
+    <h2>
+      HAPPY CLIENTS
+    </h2>
+    <div class='stat'>
+      <span>20{{contactcount}}</span>
+    </div>
+    <div class='progress_graph'>
+      <i class="fa fa-smile-o"></i>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<a><button class="button8">LOGOUT</button></a>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+
+
+
+</body>
+</html>

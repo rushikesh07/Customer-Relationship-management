@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>form</title>
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='productform.css') }}">
+  <link rel= "stylesheet" type= "text/scss" href= "{{ url_for('static',filename='productform.scss') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='productform.js') }}"></script>
+
+</head>
+<form method="POST" action="">
+<body>
+
+
+  <form>
+    <div class="form">
+  <h2>Add New Product</h2>
+  <label for="name">Product Name:</label>
+  <input type="text" maxlength="60" name="name" required="required" />
+
+  <label for="code">Product code:</label>
+  <input type="text" maxlength="60" name="code" required="required" />
+
+  <label for="category">Product Category:</label>
+  <input type="text" maxlength="60" name="category" required="required" />
+
+  <label for="Vendor">Vendor Name:</label>
+  <input type="text" minlength="6" name="Vendor" required="required"/>
+
+  <label for="Price">Price:</label>
+  <input type="text" maxlength="60" name="Price" required="required" />
+
+  <label for="Tax">Tax % :</label>
+  <input type="text" maxlength="60" name="Tax" required="required" />
+
+  <label for="Quantity">Quantity:</label>
+  <input type="text" maxlength="60" name="Quantity" required="required" />
+
+  <label for="description">Description Information:</label>
+  <input type="text" maxlength="60" name="description" />
+
+  <button type="submit">Save</button>
+</div>
+</form>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+</form>
+</html>
