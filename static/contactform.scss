@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  background: #fff;
+  color:#ddd;
+  display: flex;
+  font-family: Ubuntu light;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form{
+  box-shadow: 0 0 9px #ddd,
+              0 0 1px #aaa,
+              0 28px 25px -20px #888;
+  color: #555;
+  padding: 1em;
+  width: 400px;
+
+  h2{
+    padding: 1em;
+    text-align: center;
+  }
+
+  input, label , button{
+    display: block;
+    margin: .5em auto;
+    width: 80%;
+  }
+
+  label{
+    margin-bottom: 1em;
+  }
+
+  input{
+    background: transparent; // Fix black input on linux
+    border: 0;
+    border-bottom: 1px solid #bbb;
+    color: #555;
+    font-family: ubuntu;
+    font-weight: bold;
+    padding-bottom: 0;
+    transition: all .5s;
+  }
+
+  input:focus{
+    box-shadow:inset 0 -2px 0 steelblue;
+    padding-bottom: 1em;
+    outline: 0;
+  }
+
+  button{
+    background: #ddd;
+    border: 0;
+    color: #555;
+    cursor: pointer;
+    margin: 2em auto;
+    height: 40px;
+    width: 60px;
+  }
+  
+}
